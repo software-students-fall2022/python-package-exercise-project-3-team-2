@@ -7,6 +7,8 @@ def connect(option):
 
     soup= BeautifulSoup(page.content, "html.parser")
 
+    return soup
+
 def get_events(soup):
     my_data = []
     events= soup.select('li.event')
