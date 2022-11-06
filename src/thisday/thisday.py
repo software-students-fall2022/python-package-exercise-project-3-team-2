@@ -4,4 +4,4 @@ def ProcessInput(inputString):
         return inputString
     else:
         print("Incorrect Input, please try again.")
-    
+        return 0
