@@ -3,11 +3,14 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "examplepackagefb1258"
-description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
-version = "0.0.7"
+name = "thisday"
+description = "A package to get the data from onthisday.com."
+version = "1.0.3"
 authors = [
-  { name="Foo Barstein", email="foo.barstein@onepotcooking.com" },
+  { name="Anvi", email="@nyu.edu" },
+  { name="Leo Xu", email="gx324@nyu.edu" },
+  { name="Otis", email="@nyu.edu" },
+  { name="Danilo Montes", email="dem9855@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
@@ -24,9 +27,9 @@ classifiers = [
 dev = ["pytest"]
 
 [project.urls]
-"Homepage" = "https://github.com/nyu-software-engineering/python-package-example"
-"Repository" = "https://github.com/nyu-software-engineering/python-package-example.git"
-"Bug Tracker" = "https://github.com/nyu-software-engineering/python-package-example/issues"
+"Homepage" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-2"
+"Repository" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-2.git"
+"Bug Tracker" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-2/issues"
 
 [project.scripts]
-wisdom = "wisdom.__main__:main"
+thisday = "thisday.__main__:main"
