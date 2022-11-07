@@ -18,9 +18,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install
+      - name: Enter virtual environment
+        run: |
+          pipenv shell
       - name: Turn on 'editable' mode
         run: |
           pip install -e .
       - name: Test with pytest
         run: |
           pytest
+      - name: Exit venv
+        run: |
+          exit
