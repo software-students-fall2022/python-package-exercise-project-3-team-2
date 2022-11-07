@@ -25,3 +25,7 @@ def process_input(inputString):
     else:
         print("Incorrect Input, please try again.")
         return 0
+
+def show(my_data):
+    for data in my_data:
+        print(data)
