@@ -20,7 +20,7 @@ class Tests:
         actual = True
         assert actual == expected, 'Expected True to equal True'
 
-    def test_input():
+    def test_input(self):
         assert thisday.process_input("film-tv")=="film-tv","film-tv doesn't run correctly"
         assert thisday.process_input("history")=="history","history doesn't run correctly"
         assert thisday.process_input("sport")=="sport","sport doesn't run correctly"
