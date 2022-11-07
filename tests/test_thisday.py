@@ -30,17 +30,17 @@ class Tests:
         assert thisday.process_input("foo")==0,"other cases doesn't run correctly"
     
     def test_connect(self):
-        assert thisday.connect("history")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
-        assert thisday.connect("film-tv")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
-        assert thisday.connect("sport")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
-        assert thisday.connect("music")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
+        assert isinstance(thisday.connect("history"), BeautifulSoup), "did not return BeautifulSoup object"
+        assert isinstance(thisday.connect("film-tv"), BeautifulSoup), "did not return BeautifulSoup object"
+        assert isinstance(thisday.connect("sport"), BeautifulSoup), "did not return BeautifulSoup object"
+        assert isinstance(thisday.connect("music"), BeautifulSoup), "did not return BeautifulSoup object"
 
 
     def test_get_events(self):
-        assert thisday.get_events(thisday.connect("history"))== isinstance(list), "did not return list of events"
-        assert thisday.get_events(thisday.connect("film-tv"))== isinstance(list), "did not return list of events"
-        assert thisday.get_events(thisday.connect("sport"))== isinstance(list), "did not return list of events"
-        assert thisday.get_events(thisday.connect("music"))== isinstance(list), "did not return list of events"
+        assert isinstance(thisday.get_events(thisday.connect("history")), list), "did not return list of events"
+        assert isinstance(thisday.get_events(thisday.connect("film-tv")), list), "did not return list of events"
+        assert isinstance(thisday.get_events(thisday.connect("sport")), list), "did not return list of events"
+        assert isinstance(thisday.get_events(thisday.connect("music")), list), "did not return list of events"
         assert len(thisday.get_events(thisday.connect("history")))!=0, "list of events is empty"
         assert len(thisday.get_events(thisday.connect("film-tv")))!=0, "list of events is empty"
         assert len(thisday.get_events(thisday.connect("sport")))!=0, "list of events is empty"
