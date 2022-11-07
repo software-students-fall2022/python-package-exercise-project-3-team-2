@@ -46,5 +46,5 @@ class Tests:
         assert len(thisday.get_events(thisday.connect("sport")))!=0, "list of events is empty"
         assert len(thisday.get_events(thisday.connect("music")))!=0, "list of events is empty"
 
-    def test_display_data(self):
-        assert thisday.display_data(['film-tv','history','sport','music'])==['film-tv','history','sport','music'],"display_data doesn't run correctly"
+    def test_show(self):
+        assert thisday.show(['film-tv','history','sport','music'])==['film-tv','history','sport','music'],"display_data doesn't run correctly"
