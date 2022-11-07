@@ -7,7 +7,7 @@ def main():
     option = thisday.validate(sys.argv)
     dom = thisday.connect(option)
     li = thisday.get_events(dom)
-    thisday.show(li)
+    print(thisday.show(li))
     '''
 
 if __name__ == '__main__':
