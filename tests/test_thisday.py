@@ -22,12 +22,19 @@ class Tests:
         actual = True
         assert actual == expected, 'Expected True to equal True'
 
-    def test_process_input(self):
+    def test_process_input_valid(self):
         assert thisday.process_input("film-tv")=="film-tv","film-tv doesn't run correctly"
         assert thisday.process_input("history")=="history","history doesn't run correctly"
         assert thisday.process_input("sport")=="sport","sport doesn't run correctly"
         assert thisday.process_input("music")=="music","music doesn't run correctly"
+    
+    def test_process_input_invalid(self):
         assert thisday.process_input("foo")==0,"other cases doesn't run correctly"
+        assert thisday.process_input("F1lm-Tv")==0,"other cases doesn't run correctly"
+    
+    def test_process_input_datatype(self):
+        assert isinstance(thisday.process_input("sport"),str),"Didn't return string type"
+        assert isinstance(thisday.process_input("foo"),int),"Didn't return integer type" 
     
     def test_connect(self):
         assert isinstance(thisday.connect("history"), BeautifulSoup), "did not return BeautifulSoup object"
