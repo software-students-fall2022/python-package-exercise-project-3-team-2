@@ -18,7 +18,7 @@ def get_events(soup):
 
     return my_data
     
-def ProcessInput(inputString):
+def process_input(inputString):
     validInput=['film-tv','history','sport','music']
     if inputString in validInput:
         return inputString
