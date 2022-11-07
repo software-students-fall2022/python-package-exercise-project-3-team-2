@@ -29,3 +29,5 @@ def process_input(inputString):
 def show(data):
     for i in data:
         print(i)
+    return data
+    
