@@ -32,6 +32,6 @@ def show(my_data):
 
     return_string = ''
     for data in my_data:
-        return_string += data + '\n'
+        return_string += str(data) + '\n'
     return return_string[:-1]
     

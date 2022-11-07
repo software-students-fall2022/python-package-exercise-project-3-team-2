@@ -64,5 +64,5 @@ class Tests:
         assert thisday.show({1, 2, 3})==0, "given non-list input should return 0"
 
     def test_show_datatype(self):
-        assert type(thisday.show(['on', 'this', 'day'])) == list
-        assert type(thisday.show([1, 2, 3])) == list
+        assert type(thisday.show(['on', 'this', 'day'])) == str
+        assert type(thisday.show([1, 2, 3])) == str
