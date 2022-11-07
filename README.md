@@ -7,7 +7,10 @@
 
 ## Authors
 
-[Anvi](https://github.com/agarwalanvi01) \
+[Anvi Agarwal](https://github.com/agarwalanvi01) \
 [Leo Xu](https://github.com/Leo6016) \
 [Otis]() \
 [Danilo Montes](https://github.com/danilo-montes)
+
+## PyPI Page
+[Package on PyPI]()
