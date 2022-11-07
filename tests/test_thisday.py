@@ -34,11 +34,7 @@ class Tests:
     
     def test_process_input_datatype(self):
         assert isinstance(thisday.process_input("sport"),str),"Didn't return string type"
-        assert isinstance(thisday.process_input("foo"),int),"Didn't return integer type"
-
-    def test_process_input_(self):
-        assert thisday.process_input("foo")==0,"other cases doesn't run correctly"
-        assert thisday.process_input("F1lm-Tv")==0,"other cases doesn't run correctly"    
+        assert isinstance(thisday.process_input("foo"),int),"Didn't return integer type" 
     
     def test_connect(self):
         assert isinstance(thisday.connect("history"), BeautifulSoup), "did not return BeautifulSoup object"
