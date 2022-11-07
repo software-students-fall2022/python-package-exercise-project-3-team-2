@@ -17,3 +17,11 @@ def get_events(soup):
         my_data.append(event.get_text())
 
     return my_data
+    
+def process_input(inputString):
+    validInput=['film-tv','history','sport','music']
+    if inputString in validInput:
+        return inputString
+    else:
+        print("Incorrect Input, please try again.")
+        return 0
