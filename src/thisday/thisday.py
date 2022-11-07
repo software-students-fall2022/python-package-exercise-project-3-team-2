@@ -26,8 +26,12 @@ def process_input(inputString):
         print("Incorrect Input, please try again.")
         return 0
 
-def show(data):
-    for i in data:
-        print(i)
-    return data
+def show(my_data):
+    if type(my_data) is not list:
+        return 0
+
+    return_string = ''
+    for data in my_data:
+        return_string += str(data) + '\n'
+    return return_string[:-1]
     
