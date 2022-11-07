@@ -9,7 +9,7 @@
 
 [Anvi Agarwal](https://github.com/agarwalanvi01) \
 [Leo Xu](https://github.com/Leo6016) \
-[Otis]() \
+[Otis Lu](https://github.com/OtisL99) \
 [Danilo Montes](https://github.com/danilo-montes)
 
 ## PyPI Page
