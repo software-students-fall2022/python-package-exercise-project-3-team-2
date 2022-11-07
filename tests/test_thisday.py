@@ -29,14 +29,14 @@ class Tests:
         assert thisday.process_input("music")=="music","music doesn't run correctly"
         assert thisday.process_input("foo")==0,"other cases doesn't run correctly"
     
-    def test_connect():
+    def test_connect(self):
         assert thisday.connect("history")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
         assert thisday.connect("film-tv")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
         assert thisday.connect("sport")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
         assert thisday.connect("music")== isinstance(BeautifulSoup), "did not return BeautifulSoup object"
 
 
-    def test_get_events():
+    def test_get_events(self):
         assert thisday.get_events(thisday.connect("history"))== isinstance(list), "did not return list of events"
         assert thisday.get_events(thisday.connect("film-tv"))== isinstance(list), "did not return list of events"
         assert thisday.get_events(thisday.connect("sport"))== isinstance(list), "did not return list of events"
