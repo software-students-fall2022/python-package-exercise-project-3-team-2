@@ -2,21 +2,27 @@ import requests
 from bs4 import BeautifulSoup
 
 def connect(option):
-    URL = "https://www.onthisday.com/" + option +"/"
-    page= requests.get(URL)
+    if process_input(option) != 0:
+        URL = "https://www.onthisday.com/" + option +"/"
+        page= requests.get(URL)
 
-    soup= BeautifulSoup(page.content, "html.parser")
+        soup= BeautifulSoup(page.content, "html.parser")
 
-    return soup
+        return soup
+    else:
+        return 0
 
 def get_events(soup):
-    my_data = []
-    events= soup.select('li.event')
+    if isinstance(soup, BeautifulSoup):
+        my_data = []
+        events= soup.select('li.event')
 
-    for event in events:
-        my_data.append(event.get_text())
+        for event in events:
+            my_data.append(event.get_text())
 
-    return my_data
+        return my_data
+    else:
+        return 0
     
 def process_input(inputString):
     validInput=['film-tv','history','sport','music']
@@ -26,8 +32,12 @@ def process_input(inputString):
         print("Incorrect Input, please try again.")
         return 0
 
-def show(data):
-    for i in data:
-        print(i)
-    return data
+def show(my_data):
+    if type(my_data) is not list:
+        return 0
+
+    return_string = ''
+    for data in my_data:
+        return_string += str(data) + '\n'
+    return return_string[:-1]
     
