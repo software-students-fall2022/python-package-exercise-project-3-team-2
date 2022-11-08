@@ -45,7 +45,7 @@ class Tests:
         assert isinstance(thisday.connect("music"), BeautifulSoup), "did not return BeautifulSoup object"
 
     def test_get_events_valid(self):
-        assert thisday.get_events(BeautifulSoup)!=0, "is not taking valid input"
+        assert thisday.get_events(thisday.connect("history"))!=0, "is not taking valid input"
 
     def test_get_events_invalid(self):
         assert thisday.get_events("random-input")==0, "is taking invalid input"
