@@ -1,6 +1,35 @@
 import requests
 from bs4 import BeautifulSoup
 
+
+# main driver of the program
+def run(args):
+    option = process_input(args)
+    if option == 0:
+        return 'Please use one of the following options: film-tv, history, sport, music'
+
+    dom = connect(option)
+    if dom == 0:
+        return 'Error in getting URL'
+
+    li = get_events(dom)
+    if li == 0:
+        return 'Error getting data from page'
+
+    return show(li)
+
+
+# processes the input given on the commandline
+def process_input(inputString):
+    validInput=['film-tv','history','sport','music']
+    if inputString in validInput:
+        return inputString
+    else:
+        print("Incorrect Input, please try again.")
+        return 0
+
+
+# connects to the respective URL
 def connect(option):
     if process_input(option) != 0:
         URL = "https://www.onthisday.com/" + option +"/"
@@ -12,6 +41,8 @@ def connect(option):
     else:
         return 0
 
+
+# gets the events from the page
 def get_events(soup):
     if isinstance(soup, BeautifulSoup):
         my_data = []
@@ -24,14 +55,8 @@ def get_events(soup):
     else:
         return 0
     
-def process_input(inputString):
-    validInput=['film-tv','history','sport','music']
-    if inputString in validInput:
-        return inputString
-    else:
-        print("Incorrect Input, please try again.")
-        return 0
 
+# displays the data to the user
 def show(my_data):
     if type(my_data) is not list:
         return 0
