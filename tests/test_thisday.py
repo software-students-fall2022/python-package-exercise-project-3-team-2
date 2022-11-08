@@ -1,27 +1,14 @@
-from cmath import isinf
 from bs4 import BeautifulSoup
-import pytest
 from thisday import thisday
 
 class Tests:
-    # function tests go here
-    # 
-    # convention is as follows...
-    # test_<function name>(self, [<args>])
-    # 
-    # for example:
-    # test_parse_data(self, data)
+    # # test just to make sure that the test file works
+    # def test_sanity_check(self):
+    #     expected = True
+    #     actual = True
+    #     assert actual == expected, 'Expected True to equal True'
 
-    # test file outline slides
-    # https://github.com/nyu-software-engineering/course-materials/blob/master/slides/software-testing.md
-    
-
-    # test just to make sure that the test file works
-    def test_sanity_check(self):
-        expected = True
-        actual = True
-        assert actual == expected, 'Expected True to equal True'
-
+    ################# process_input #################
     def test_process_input_valid(self):
         assert thisday.process_input("film-tv")=="film-tv","film-tv doesn't run correctly"
         assert thisday.process_input("history")=="history","history doesn't run correctly"
@@ -36,6 +23,7 @@ class Tests:
         assert isinstance(thisday.process_input("sport"),str),"Didn't return string type"
         assert isinstance(thisday.process_input("foo"),int),"Didn't return integer type" 
     
+    ################# connect #################
     def test_connect_valid(self):
         assert thisday.connect("history")!=0, "is not allowing valid input"
         assert thisday.connect("film-tv")!=0, "is not allowing valid input"
@@ -51,6 +39,7 @@ class Tests:
         assert isinstance(thisday.connect("sport"), BeautifulSoup), "did not return BeautifulSoup object"
         assert isinstance(thisday.connect("music"), BeautifulSoup), "did not return BeautifulSoup object"
 
+    ################# get_events #################
     def test_get_events_valid(self):
         assert thisday.get_events(thisday.connect("history"))!=0, "is not taking valid input"
 
@@ -69,7 +58,7 @@ class Tests:
         assert len(thisday.get_events(thisday.connect("sport")))!=0, "list of events is empty"
         assert len(thisday.get_events(thisday.connect("music")))!=0, "list of events is empty"
 
-
+    ################# show #################
     def test_show_valid(self):
         assert thisday.show(['one', 'two', 'three'])=='one\ntwo\nthree', "output is formatted incorrectly with strings"
         assert thisday.show([1, 2, 3])=='1\n2\n3', "output is formatted incorrectly with integers"
