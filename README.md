@@ -2,12 +2,14 @@
 
 # `thisday`
 
-`thisday` is a package that accesses onthisday.com to give the user events that occurred for that day.
+`thisday` is a command line tool that accesses onthisday.com to give the user events that occurred for that day.
 
 
 ## How to use the package
 
 It is recommended to install the package in a virtual environment, though one can install globally by using `pip` instead of `pipenv` where it appears should they please.
+
+<strong>Note that this package is intended for command line use only.</strong>
 
 1. install `thisday` via `pipenv`
 ```
@@ -27,9 +29,11 @@ $ thisday sport
 
 $ thisday music
 ```
-3. Learn about what happened on this day!
+4. Learn about what happened on this day!
 
 ## Test program
+We have have provided a shell script demonstrating the functionality of our package.
+
 
 ## Package functions
 
@@ -61,7 +65,7 @@ $ thisday music
 ## Contributing to the package
 
 ## PyPI Page
-[Package on PyPI]()
+[Package on PyPI](https://pypi.org/project/thisday/)
 
 ## Authors
 
