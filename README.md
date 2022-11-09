@@ -32,44 +32,50 @@ $ thisday music
 4. Learn about what happened on this day!
 
 ## Test program
-We have have provided a shell script demonstrating the functionality of our package.
-
+We have provided a [shell script](func_example.sh) demonstrating the functionality of our package.
 
 ## Package functions
 
-### run
-<strong>Params:</strong> args(argument for the function)<br>
-<strong>Returns:</strong> content retrieved from website if runs correctly, or an error message if something went wrong.<br>
+### `run`
+<strong>Params:</strong> `args` (argument for the function) \
+<strong>Returns:</strong> content retrieved from website if runs correctly, or an error message if something went wrong \
 <strong>Description:</strong> Main driver function of the package
 
-### process_input
-<strong>Params:</strong> inputString(a string for input)<br>
-<strong>Returns:</strong> the input string if it is valid, or an error message if it is not.<br>
+### `process_input`
+<strong>Params:</strong> `inputString` (a string for input) \
+<strong>Returns:</strong> the input string if it is valid, or an error message if it is not \
 <strong>Description:</strong> Function to check if the argument is valid for the package
 
-### connect
-<strong>Params:</strong> option(a string returned from process_input)<br>
-<strong>Returns:</strong> A BeautifulSoup object generated from the website if option is valid, or 0 if option is invalid<br>
+### `connect`
+<strong>Params:</strong> `option` (a string returned from process_input) \
+<strong>Returns:</strong> A BeautifulSoup object generated from the website if option is valid, or 0 if option is invalid \
 <strong>Description:</strong> Function to connect to the respective URL for each input option
 
-### get_events
-<strong>Params:</strong> soup(a BeautifulSoup object returned from connect)<br>
-<strong>Returns:</strong> a list of strings retrieved from the website, or 0 if failed to retrieve<br>
+### `get_events`
+<strong>Params:</strong> `soup` (a BeautifulSoup object returned from connect) \
+<strong>Returns:</strong> a list of strings retrieved from the website, or 0 if failed to retrieve \
 <strong>Description:</strong> Function to retrieve data from the URL
 
-### show
-<strong>Params:</strong> my_data(a list of strings returned from get_events)<br>
-<strong>Returns:</strong> a string if the list is valid, or 0 if not<br>
+### `show`
+<strong>Params:</strong> `my_data` (a list of strings returned from get_events) \
+<strong>Returns:</strong> a string if the list is valid, or 0 if not \
 <strong>Description:</strong> Function that displays data to the user
 
-## Contributing to the package
+## Testing locally
 
-## PyPI Page
-[Package on PyPI](https://pypi.org/project/thisday/)
+If you would like to test the package, download the package files to your machine. Then, within the directory of the download, follow the steps 1 and 2 in [how to use the package](#how-to-use-the-package) to create and enter the virtual environment, then run the following command to run the test file:
+```
+$ pytest
+OR 
+$ python3 -m pytest
+```
 
 ## Authors
 
 [Anvi Agarwal](https://github.com/agarwalanvi01) \
+[Danilo Montes](https://github.com/danilo-montes) \
 [Leo Xu](https://github.com/Leo6016) \
-[Otis Lu](https://github.com/OtisL99) \
-[Danilo Montes](https://github.com/danilo-montes)
+[Otis Lu](https://github.com/OtisL99)
+
+## PyPI Page
+[Package on PyPI](https://pypi.org/project/thisday/)
