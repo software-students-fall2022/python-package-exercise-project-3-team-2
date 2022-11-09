@@ -11,21 +11,21 @@ class Tests:
     ################# run #################
     def test_run_valid(self):
         error_msgs = ['Please use one of the following options: film-tv, history, sport, music', 'Error in getting URL', 'Error getting data from page']
-        assert thisday.run("film-tv") not in error_msgs,"film-tv doesn't run correctly"
-        assert thisday.run("history") not in error_msgs,"history doesn't run correctly"
-        assert thisday.run("sport") not in error_msgs,"sport doesn't run correctly"
-        assert thisday.run("music") not in error_msgs,"music doesn't run correctly"
+        assert thisday.run(['', "film-tv"]) not in error_msgs,"film-tv doesn't run correctly"
+        assert thisday.run(['', "history"]) not in error_msgs,"history doesn't run correctly"
+        assert thisday.run(['', "sport"]) not in error_msgs,"sport doesn't run correctly"
+        assert thisday.run(['', "music"]) not in error_msgs,"music doesn't run correctly"
 
     def test_run_invalid(self):
         error_msgs = ['Please use one of the following options: film-tv, history, sport, music', 'Error in getting URL', 'Error getting data from page']
-        assert thisday.run("foo") in error_msgs,"invalid input doesn't return correct message"
-        assert thisday.run("games") in error_msgs,"invalid input doesn't return correct message"
-        assert thisday.run("two three") in error_msgs,"invalid input doesn't return correct message"
-        assert thisday.run("film") in error_msgs,"invalid input doesn't return correct message"
+        assert thisday.run(['', "foo"]) in error_msgs,"invalid input doesn't return correct message"
+        assert thisday.run(['', "games"]) in error_msgs,"invalid input doesn't return correct message"
+        assert thisday.run(['', "two", "three"]) in error_msgs,"invalid input doesn't return correct message"
+        assert thisday.run(['', "film"]) in error_msgs,"invalid input doesn't return correct message"
 
     def test_run_datatype(self):
-        assert type(thisday.run('film-tv')) == str, 'run output is not a string on valid input'
-        assert type(thisday.run('test')) == str, 'run output is not a string on invalid input'
+        assert type(thisday.run(['', 'film-tv'])) == str, 'run output is not a string on valid input'
+        assert type(thisday.run(['', 'test'])) == str, 'run output is not a string on invalid input'
 
 
     ################# process_input #################

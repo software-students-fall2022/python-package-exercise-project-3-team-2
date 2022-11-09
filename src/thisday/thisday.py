@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 # main driver of the program
 def run(args):
-    option = process_input(args)
+    option = process_input(str(args[1]))
     if option == 0:
         return 'Please use one of the following options: film-tv, history, sport, music'
 

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "thisday"
 description = "A package to get the data from onthisday.com."
-version = "1.0.10"
+version = "1.0.11"
 authors = [
   { name="Anvi Agarwal", email="aa7140@nyu.edu" },
   { name="Leo Xu", email="gx324@nyu.edu" },
