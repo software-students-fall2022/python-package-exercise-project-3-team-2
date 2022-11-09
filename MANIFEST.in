@@ -1,1 +1,1 @@
-include Pipfile Pipfile.lock
+include Pipfile Pipfile.lock tests/*
