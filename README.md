@@ -19,7 +19,11 @@ $ pipenv install thisday
 ```
 $ pipenv shell
 ```
-3. use the terminal to type the command `thisday [option]`, valid options include: history, film-tv, sport, music
+3. now that you are in the virtual environment, install package dependencies `bs4` and `requests` (and `pytest` if you want to run tests)
+```
+$ pipenv install beautifulsoup4 requests pytest
+```
+4. use the terminal to type the command `thisday [option]`, valid options include: history, film-tv, sport, music
 ```
 $ thisday history
 
@@ -29,9 +33,9 @@ $ thisday sport
 
 $ thisday music
 ```
-4. Learn about what happened on this day!
+5. Learn about what happened on this day!
 
-5. To exit the virtual environment, run the `exit` command within the shell (skip if not using a virtual environment)
+6. To exit the virtual environment, run the `exit` command within the shell (skip if not using a virtual environment)
 ```
 $ exit
 ```

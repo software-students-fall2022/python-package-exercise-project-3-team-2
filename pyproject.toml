@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "thisday"
 description = "A package to get the data from onthisday.com."
-version = "1.0.12"
+version = "1.0"
 authors = [
+  { name="Danilo Montes", email="dem9855@nyu.edu" },
   { name="Anvi Agarwal", email="aa7140@nyu.edu" },
   { name="Leo Xu", email="gx324@nyu.edu" },
-  { name="Otis", email="zl2883@nyu.edu" },
-  { name="Danilo Montes", email="dem9855@nyu.edu" }
+  { name="Otis", email="zl2883@nyu.edu" }
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
