@@ -1,21 +1,32 @@
-<!-- [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9089656&assignment_repo_type=AssignmentRepo) -->
 ![Build & Test](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-2/actions/workflows/build.yaml/badge.svg)
 
 # `thisday`
 
 `thisday` is a package that accesses onthisday.com to give the user events that occurred for that day.
 
-## Authors
-
-[Anvi Agarwal](https://github.com/agarwalanvi01) \
-[Leo Xu](https://github.com/Leo6016) \
-[Otis Lu](https://github.com/OtisL99) \
-[Danilo Montes](https://github.com/danilo-montes)
 
 ## How to use the package
 
-1. install thisday via pipenv
-2. use the terminal to type the command thisday [option], valid options include {history,film-tv,sports,music}
+It is recommended to install the package in a virtual environment, though one can install globally by using `pip` instead of `pipenv` where it appears should they please.
+
+1. install `thisday` via `pipenv`
+```
+$ pipenv install thisday
+```
+2. enter virtual environment
+```
+$ pipenv shell
+```
+3. use the terminal to type the command `thisday [option]`, valid options include: history, film-tv, sport, music
+```
+$ thisday history
+
+$ thisday film-tv
+
+$ thisday sport
+
+$ thisday music
+```
 3. Learn about what happened on this day!
 
 ## Test program
@@ -51,3 +62,10 @@
 
 ## PyPI Page
 [Package on PyPI]()
+
+## Authors
+
+[Anvi Agarwal](https://github.com/agarwalanvi01) \
+[Leo Xu](https://github.com/Leo6016) \
+[Otis Lu](https://github.com/OtisL99) \
+[Danilo Montes](https://github.com/danilo-montes)
