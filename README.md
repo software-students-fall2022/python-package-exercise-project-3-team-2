@@ -31,6 +31,11 @@ $ thisday music
 ```
 4. Learn about what happened on this day!
 
+5. To exit the virtual environment, run the `exit` command within the shell (skip if not using a virtual environment)
+```
+$ exit
+```
+
 ## Test program
 We have provided a [shell script](func_example.sh) demonstrating the functionality of our package.
 
