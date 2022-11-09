@@ -3,6 +3,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[[source]]
+url = "https://test.pypi.org/simple/"
+verify_ssl = true
+name = "testpypi"
+
 [packages]
 pytest = "*"
 beautifulsoup4 = "==4.11.1"
@@ -10,6 +15,10 @@ requests = "==2.28.1"
 thisday = {editable = true, path = "."}
 
 [dev-packages]
+pytest = "*"
+beautifulsoup4 = "==4.11.1"
+requests = "==2.28.1"
+thisday = {editable = true, path = "."}
 
 [requires]
 python_version = "3"
