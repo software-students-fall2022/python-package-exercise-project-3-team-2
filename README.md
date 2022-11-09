@@ -70,6 +70,8 @@ OR
 $ python3 -m pytest
 ```
 
+Tip: When working on the package, it might be helpful to install the package in editable mode, so that changes to the package are immediately updated in the virtual environment. To do this, run `pipenv install -e .` from the main directory of the project
+
 ## Authors
 
 [Anvi Agarwal](https://github.com/agarwalanvi01) \
